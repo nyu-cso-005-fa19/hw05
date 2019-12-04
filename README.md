@@ -52,7 +52,7 @@ solutions after the homework deadline has passed.
 Consider a memory system with 13-bit wide virtual addresses, 11-bit
 wide physical addresses, and the following features:
 
-* Page table: 32 bytes page size, single level (i.e. 256 entries)
+* Page table: 32 bytes page size, single level (i.e. 256 virtual pages of 32 bytes each)
 
 * TLB: 4 sets, 4-way set associative.
 
