@@ -272,7 +272,7 @@ with the following block format
 
 where a=1 means that the block is allocated and a=0 that it is
 free. Further assume that the allocator maintains word (i.e. 16
-bytes) alignment. Note that the full 16 bits of the header are used to
+bits) alignment. Note that the full 16 bits of the header are used to
 store the block size. However, since block sizes are multiples of 8
 bytes, the lowest 3 bits of the block size are always 0. Hence, the
 corresponding bits in the header can be repurposed to store other
