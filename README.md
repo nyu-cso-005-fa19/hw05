@@ -58,7 +58,8 @@ wide physical addresses, and the following features:
 
 Further consider the following state of the page table and TLB.
 
-Page table (only the first 16 PTEs are shown):
+Page table (only the first 16 PTEs are shown, all remaining PTEs
+are invalid):
 
 | VPN | PPN | V | VPN | PPN | V |
 |-----|-----|---|-----|-----|---|
@@ -277,6 +278,11 @@ bytes, the lowest 3 bits of the block size are always 0. Hence, the
 corresponding bits in the header can be repurposed to store other
 information. In this case, only the least significant bit is used for
 other purposes, namely to indicate whether the block is allocated.
+
+The block size includes the header, payload, and padding. The
+alignment requirement means that block sizes must be chosen such that
+the payload of each block always starts at an address that is a
+multiple of 16.
 
 Your task is to determine the block sizes and header values (in hex)
 for each of the four malloc blocks that would result from the
